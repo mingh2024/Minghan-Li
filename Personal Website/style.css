@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.navbar  {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+
+.navbar .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20 px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: cyan;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info p {
+    font-size: 20px;
+    margin: 10px
+}
+
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: cyan;
+    border: 2px solid cyan;
+    border-radius: 40 px;
+    box-shadow: 0 0 10 px cyan;
+    font-size: 16 px;
+    color: #1f242d;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: transparent;
+    color: cyan;
+    box-shadow: none;
+}
+
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    font-size: 20px;
+    color: cyan;
+    margin: 0 8px;
+    transition: .5s
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: cyan;
+    color: #1f242d;
+    box-shadow: 0 0 10px cyan;
+}
+
+
+/*
+.home-img .img-box {
+    width: 30vw;
+    height: 30vw;
+    background: red;
+    border-radius: 50%;
+}
+
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: slateblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.home-img .img-box .img-item img{
+    position: absolute;
+    top: 70px;
+    display: block;
+    width: 65%;
+    object-fit: cover
+}
+    */
+
+.about {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.about-info h1 {
+    font-size: 55px;
+}
+    
+.about-info p {
+    font-size: 20px;
+    margin: 10px
+}
