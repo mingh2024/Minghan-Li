@@ -1,4 +1,4 @@
 # World RoboCup Junior
-Location: Bordeaux, France /n
-Time: July 2023/n
-Category: SoccerLightweight
+Location: Bordeaux, France<br />
+Time: July 2023<br />
+Category: SoccerLightweight<br />
