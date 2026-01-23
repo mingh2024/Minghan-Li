@@ -15,25 +15,25 @@
     <nav class="navbar">
         <a href="#" class="logo">Minghan Li</a>
         <ul>
-            <li>
-                <a href="#">Home</a>
+            <li class="active">
+                <a href="#" class="nav-link" data-section="home">Home</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="#" class="nav-link" data-section="about">About</a>
             </li>
             <li>
-                <a href="#">Portfolio</a>
+                <a href="#" class="nav-link" data-section="portfolio">Portfolio</a>
             </li>
             <li>
-                <a href="#">Fencing</a>
+                <a href="#" class="nav-link" data-section="fencing">Fencing</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#" class="nav-link" data-section="contact">Contact</a>
             </li>
         </ul>
     </nav>
 
-    <section class="home">
+    <section id="home" class="section home">
             
            
         <div class="home-info">
@@ -60,9 +60,50 @@
 
     </section>
 
-    <section class="fencing"
-    
+    <section id="about" class="section about" hidden>
+        <div class="about-info">
+            <h1>About Me:</h1>
+            <p>Hi, my name is Minghan Li but you can also call me David.
+                I'm currently a student at the University of Waterloo, studying computer science.
+                My hometown is in Richmond Hill but my family was originally from China. We moved to
+                Canada when I was in grade 5.
+            </p>
+        </div>
+    </section>
 
+    <section id="portfolio" class="section portfolio" hidden>
+        <div class="portfolio-info">
+            <h1>Portfolio</h1>
+            <p>Here are a few projects I'm proud of. I'm always adding more.</p>
+            <ul>
+                <li>Expense Tracker: A simple web app to log spending and visualize categories.</li>
+                <li>Soccer Lightweight: A lightweight training plan and notes app for drills.</li>
+                <li>Personal Website: Built with HTML/CSS/JS to showcase my work and interests.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="fencing" class="section fencing" hidden>
+        <div class="fencing-info">
+            <h1>Fencing</h1>
+            <p>I started fencing in middle school and compete in foil. I enjoy the strategy, speed,
+                and precision that the sport demands.</p>
+            <ul>
+                <li>Focus areas: footwork, distance control, and timing.</li>
+                <li>Training: club practices, lessons, and conditioning.</li>
+                <li>Highlights: local tournaments and team events.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact" hidden>
+        <div class="contact-info">
+            <h1>Contact</h1>
+            <p>Reach me at minghan2024li@email.com.</p>
+        </div>
+    </section>
+
+    <script src="nav.js"></script>
 
 </body>
 
