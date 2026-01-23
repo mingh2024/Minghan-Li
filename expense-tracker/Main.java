@@ -1,17 +1,13 @@
 package main;
-import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static final Path DATA_FILE = Path.of("expenses.csv");
-
     public static void main(String[] args) {
         ExpenseTracker tracker = new ExpenseTracker();
         Scanner scanner = new Scanner(System.in);
-        tracker.loadFromFile(DATA_FILE);
 
         while (true) {
             System.out.println("\nExpense Tracker Menu:");
@@ -22,9 +18,8 @@ public class Main {
             System.out.println("5. Monthly Summary");
             System.out.println("6. Search Expenses");
             System.out.println("7. Set Monthly Budget");
-            System.out.println("8. Save Expenses");
-            System.out.println("9. Exit");
-            System.out.print("Enter your choice (1-9): ");
+            System.out.println("8. Exit");
+            System.out.print("Enter your choice (1-8): ");
 
             int choice = readInt(scanner);
             scanner.nextLine();
@@ -92,11 +87,6 @@ public class Main {
                     break;
 
                 case 8:
-                    tracker.saveToFile(DATA_FILE);
-                    break;
-
-                case 9:
-                    tracker.saveToFile(DATA_FILE);
                     System.out.println("Have a nice day!");
                     scanner.close();
                     return;

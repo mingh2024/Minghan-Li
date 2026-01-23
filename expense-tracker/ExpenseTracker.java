@@ -1,8 +1,4 @@
 package main;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
@@ -94,43 +90,4 @@ class ExpenseTracker {
     }
     
 
-    public void saveToFile(Path filePath) {
-        try (BufferedWriter writer = Files.newBufferedWriter(filePath)) {
-            writer.write(String.format("# budget=%.2f%n", monthlyBudget));
-            for (Expense expense : expenses) {
-                writer.write(expense.toCsv());
-                writer.newLine();
-            }
-            System.out.println("Expenses saved to " + filePath);
-        } catch (IOException e) {
-            System.out.println("Failed to save expenses: " + e.getMessage());
-        }
-    }
-    
-
-    public void loadFromFile(Path filePath) {
-        if (!Files.exists(filePath)) {
-            return;
-        }
-
-        List<Expense> loaded = new ArrayList<>();
-        try {
-            List<String> lines = Files.readAllLines(filePath);
-            for (String line : lines) {
-                if (line.isBlank()) {
-                    continue;
-                }
-                if (line.startsWith("# budget=")) {
-                    String budgetValue = line.substring("# budget=".length());
-                    monthlyBudget = Double.parseDouble(budgetValue);
-                    continue;
-                }
-                loaded.add(Expense.fromCsv(line));
-            }
-            expenses = new ArrayList<>(loaded);
-            System.out.println("Loaded " + expenses.size() + " expenses from " + filePath);
-        } catch (IOException | IllegalArgumentException e) {
-            System.out.println("Failed to load expenses: " + e.getMessage());
-        }
-    }
 }
