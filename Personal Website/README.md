@@ -1,1 +1,1 @@
-Constantly updated personal website
+Personal Website (Constantly Updated)
