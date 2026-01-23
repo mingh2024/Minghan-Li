@@ -1,11 +1,6 @@
 const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
 
 const setActiveSection = (targetId) => {
-  sections.forEach((section) => {
-    section.hidden = section.id !== targetId;
-  });
-
   navLinks.forEach((link) => {
     const listItem = link.closest('li');
     if (!listItem) {
@@ -19,15 +14,26 @@ const setActiveSection = (targetId) => {
   });
 };
 
+const scrollToSection = (targetId) => {
+  const section = document.getElementById(targetId);
+  if (!section) {
+    return;
+  }
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    const targetId = link.dataset.section;
+    const targetId = link.dataset.section || link.getAttribute('href')?.slice(1);
     if (!targetId) {
       return;
     }
+    history.pushState(null, '', `#${targetId}`);
     setActiveSection(targetId);
+    scrollToSection(targetId);
   });
 });
 
-setActiveSection('home');
+const initialSection = window.location.hash.replace('#', '') || 'home';
+setActiveSection(initialSection);
