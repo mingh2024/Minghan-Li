@@ -5,37 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website Using HTML & CSS | Codehal</title>
-    
+    <title>Fencing | Minghan Li</title>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="#" class="logo">Minghan Li</a>
+        <a href="index.html" class="logo">Minghan Li</a>
         <ul>
             <li>
-                <a href="#">Home</a>
+                <a href="index.html#home">Home</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="index.html#about">About</a>
             </li>
             <li>
-                <a href="#">Portfolio</a>
+                <a href="index.html#portfolio">Portfolio</a>
+            </li>
+            <li class="active">
+                <a href="fencing.html">Fencing</a>
             </li>
             <li>
-                <a href="#">Fencing</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
+                <a href="index.html#contact">Contact</a>
             </li>
         </ul>
     </nav>
 
+    <section class="fencing fencing-page">
+        <div class="fencing-info">
+            <h1>Fencing</h1>
+            <p>I've been fencing for 12 years since elementary school.</p>
 
+            <p>Some major awards/achievements I got:</p>
+            <ul>
+                <li>Canadian National Champion, Vice-Champion</li>
+                <li>Ontario Provincial Champion &times; 3</li>
+                <li>USA National Championship top 30</li>
+            </ul>
+        </div>
+    </section>
 
+    <section class="fencing-gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="images/fencing/fencing-rmc-trophy.jpg" alt="Team holding a trophy in front of the RMC CMR banner at the Royal Military College of Canada">
+                <figcaption>RMC CMR tournament — trophy presentation</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/fencing/fencing-oua-team.jpg" alt="Team of four fencers with gold OUA medals in front of the OUA championship banner">
+                <figcaption>OUA Championship — team gold medals</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/fencing/fencing-podium-indoor.jpg" alt="Three teammates standing on makeshift podium steps wearing medals">
+                <figcaption>Podium finish with teammates</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/fencing/fencing-action-lunge.jpg" alt="Fencer in white uniform and mask lunging during a bout on the strip">
+                <figcaption>Mid-bout lunge on the strip</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="images/fencing/fencing-podium-sabre-winners.jpg" alt="Individual Sabre Winners podium at the OUA Championship hosted by Waterloo, gold medal in the center">
+                <figcaption>Individual Sabre Winners — OUA Championship</figcaption>
+            </figure>
+        </div>
+    </section>
 
+</body>
 
-    
-<body>
+</html>
