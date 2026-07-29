@@ -262,6 +262,60 @@ a {
     margin: 8px 0;
 }
 
+.portfolio-page {
+    height: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 140px 9% 60px;
+}
+
+.portfolio-page .portfolio-info {
+    flex: 1 1 380px;
+}
+
+.portfolio-photo {
+    flex: 0 0 auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.portfolio-photo img {
+    display: block;
+    width: 280px;
+    max-width: 60vw;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid cyan;
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.18);
+    transition: transform .4s;
+}
+
+.portfolio-photo img:hover {
+    transform: translateY(-6px);
+}
+
+.portfolio-caption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #b8bcc4;
+}
+
+@media (max-width: 768px) {
+    .portfolio-page {
+        flex-direction: column-reverse;
+    }
+
+    .portfolio-photo {
+        margin: 0 auto;
+    }
+
+    .portfolio-photo img {
+        width: 240px;
+        max-width: 70vw;
+    }
+}
+
 .fencing {
     display: flex;
     align-items: center;
